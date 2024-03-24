@@ -1,0 +1,10 @@
+ods exclude
+Partialcorr
+errorsscp;
+PROC GLM DATA=ARTHR;
+CLASS VACGRP;
+MODEL MO1 MO2 MO3 = VACGRP/SS3;
+REPEATED VISIT PROFILE/PRINTE SUMMARY;
+TITLES3 'Multivariate approach';
+QUIT;
+RUN;
